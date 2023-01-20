@@ -1,0 +1,419 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/* Base */
+
+.h1 {
+  position: relative;
+  color: hsl(0, 0%, 68%);
+  font-weight: bold;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 0.5px;
+  overflow:hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 6s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 480px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+} 
+
+.name {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+
+  .name {
+    padding: 64px;
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 600px;
+    }
+  }
+
+   .img{
+     /* background-image: url("https://media.istockphoto.com/id/1296302942/fr/vid%C3%A9o/vue-avant-de-lhomme-hacker-piratage-site-web-en-ligne-ou-de-sengager-piratage-dans-les.jpg?s=640x640&k=20&c=AHQy7MRMdZsM6th9MEmRgmmV3f14oRrokbawNeMb1z0="); */
+    background-size: cover;
+    background-attachment: fixed; 
+    background-color: hsl(240, 100%, 10%);
+   }
+    
+.mask{
+    background-color: hsla(0, 0%, 0%, 0.6);
+} 
+.contain{
+    position : relative;
+    width: 100%;
+    display:flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #24ecff;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+.ring::before{
+    content :'';
+    position:absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #24ecff;
+    box-shadow:0 0 0 5px #24ecff33,0 0 0 10px #24ecff22,
+    0 0 0 20px #24ecff11,
+    0 0 20px #24ecff,
+    0 0 50px #24ecff;
+}
+.ring:nth-child(3){
+    animation: animate2 4s linear infinite ;
+    animation-delay: -3s;
+    position:absolute;
+    top:-66.66px;
+    border-left: 4px solid #f50808;
+    border-top: 4px solid transparent;
+}
+.ring:nth-child(3)::before{
+    content :'';
+    position:absolute;
+    bottom: 12px;
+    left: 12px;
+    top:initial;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #f50808;
+    box-shadow:0 0 0 5px #f5080833,0 0 0 10px #f5080822,
+    0 0 0 20px #f5080811,
+    0 0 20px #f50808,
+    0 0 50px #f50808;
+}
+.ring:nth-child(2){
+    animation: animate2 4s linear infinite ;
+    border-left: 4px solid #93ff2d;
+    border-top: 4px solid transparent;
+    animation-delay: -1s;
+    
+}
+.ring:nth-child(2)::before{
+    content :'';
+    position:absolute;
+    bottom: 12px;
+    left: 12px;
+    top:initial;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #93ff2d;
+    box-shadow:0 0 0 5px #93ff2d33,0 0 0 10px #93ff2d22,
+    0 0 0 20px #24ecff11,
+    0 0 20px #93ff2d,
+    0 0 50px #93ff2d;
+}
+
+@keyframes animate2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}
+.head{
+    color: hsl(0, 0%, 28%);
+}
+
+.container{
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .card{
+  position: relative;
+  cursor: pointer;
+}
+
+.container .card .face{
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+.maskk{
+  width: 300px;
+  height: 200px;
+  background-color: hsla(0, 0%, 0%, 0.6);
+} 
+.container .card .face.face1{
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+  /* background: #ff0057; */
+  transform: translateY(0);
+}
+.container .card:hover .face.face1.dungeon{
+  background-image: url("../images/dungeon.png");
+  
+  background-size: cover;
+}
+.container .card:hover .face.face1.info{
+  background-image: url("../images/centreInfo.jpg");
+  
+  background-size: cover;
+}
+.container .card .face.face1 .content{
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+  max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2{
+  position: relative;
+  background-color: hsl(240, 100%, 4%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px #333;;
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+
+.container .card .face.face2 .content a{
+  margin: 15px 0 0;
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 900;
+   background: #333;
+  color: #fff;
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 30%;
+}
+
+.container .card .face.face2 .content a:hover{
+ color: #333;
+ background: transparent;
+}
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.required{
+  color: #a50303;
+}
+/* .btn-three{
+    width: 30rem; 
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+   }
+   .btn-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  } */
+
+
+  /* .card {
+    width: 30rem;
+    background: hsl(240, 100%, 10%);
+    box-shadow: 0 15px 25px rgba(94, 3, 3, 0.6);
+    border-radius: 10px;
+  }
+  .card:hover{
+    
+  } */
+  
+/* .loader{
+    position: relative;
+    width: 800px;
+    height: 10px;
+    background: #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+
+}
+.loader::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: linear-gradient(90deg,#fb0000,#0000ff,#ffffff,#ffff00,#fb0000,#0000ff,#ffffff,#ffff00,#fb0000);
+    animation: animate 20s linear infinite;
+    background-size: 500%;
+}
+.loader::after{
+    content: '';
+    position:absolute;
+    inset: 0;
+    background: linear-gradient(90deg,#fb0000,#0000ff,#ffff00,#ffff00,#fb0000,#0000ff,#ffffff,#ffff00,#fb0000);
+    animation: animate 20s linear infinite;
+    background-size: 500%;
+    filter: blur(20px);
+}
+@keyframes animate{
+    0%
+    {
+        background-position: 0 0;
+    }
+    0%
+    {
+        background-position: 500% 0;
+    }
+} */
+/* https://media.istockphoto.com/id/1296302942/fr/vid%C3%A9o/vue-avant-de-lhomme-hacker-piratage-site-web-en-ligne-ou-de-sengager-piratage-dans-les.jpg?s=640x640&k=20&c=AHQy7MRMdZsM6th9MEmRgmmV3f14oRrokbawNeMb1z0= */
+
